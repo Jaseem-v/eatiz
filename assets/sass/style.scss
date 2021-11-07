@@ -108,6 +108,9 @@
   @media only screen and (max-width: $bp-992) {
     height: auto;
   }
+  @media only screen and (max-width: $bp-xsmall) {
+    background-image: url('../img/slider1.1.jpg');
+  }
 
   &__left-part,
   &__right-part {
@@ -121,6 +124,9 @@
     @media only screen and (max-width: $bp-992) {
       height: auto;
       padding: 8rem 1rem;
+    }
+
+    @media only screen and (max-width: $bp-xsmall) {
       text-align: center;
       align-items: center;
     }
@@ -162,6 +168,10 @@
     @media only screen and (max-width: $bp-xsmall) {
       font-size: 3.6rem;
     }
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 4.6rem;
+      max-width: 62rem;
+    }
   }
 
   &__sub-title {
@@ -177,18 +187,58 @@
 }
 
 .reservation {
-  &__form-item {
-    width: 90%;
-    padding: 1.5rem 2rem;
-    border: 1px solid #e5e5e5;
-    border-radius: 5px;
-    margin-right: 1rem;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
   &__form {
     padding: 4rem 0.5rem;
+    @media only screen and (max-width: $bp-992) {
+      padding: 0rem 0.5rem;
+    }
+
+    &-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      @media only screen and (max-width: $bp-xsmall) {
+        flex-direction: column;
+      }
+    }
+
+    &-item {
+      position: relative;
+      width: 46%;
+
+      i {
+        position: absolute;
+        right: 5.5%;
+        bottom: 50%;
+        font-size: 1.8rem;
+        color: #cc3333;
+      }
+
+      &--small {
+        width: 31%;
+
+        @media only screen and (max-width: $bp-xsmall) {
+          width: 100%;
+        }
+      }
+
+      @media only screen and (max-width: $bp-xsmall) {
+        width: 100%;
+      }
+    }
+
+    &-input {
+      padding: 1.5rem 2rem;
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      width: 100%;
+      display: inline;
+      outline: #cc3333;
+      justify-self: stretch;
+    }
   }
 
   &__img {
@@ -196,6 +246,16 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
+  }
+  &__button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  &__btn {
+    padding: 0.8rem 8rem;
   }
 }
 
@@ -279,7 +339,6 @@
 .wcu {
   &__single-card {
     padding: 3rem;
-    max-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -317,8 +376,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
+    width: 50%;
     margin-bottom: 3.5rem;
+
+    @media only screen and (max-width: $bp-992) {
+      width: 65%;
+    }
+    @media only screen and (max-width: $bp-767) {
+      width: 80%;
+    }
+    @media only screen and (max-width: $bp-xsmall) {
+      width: 100%;
+    }
 
     &-item {
       list-style-type: none;
@@ -327,7 +396,7 @@
       color: #0b0320;
       cursor: pointer;
       border-radius: 5rem;
-      padding: 1rem 2rem;
+      padding: 1rem 3rem;
       margin-left: 0.5rem;
       margin-right: 0.5rem;
       transition: all 0.5s ease;
@@ -335,9 +404,13 @@
       background-color: #f5f5f5;
       margin-bottom: 0.7rem;
 
+      @media only screen and (max-width: $bp-xsmall) {
+        padding: 1rem 1.8rem;
+      }
+
       &:hover,
       &.active {
-        background: #c33333;
+        background: #cc3333;
         color: #fff;
       }
     }
@@ -378,7 +451,7 @@
     font-weight: 700;
 
     span {
-      color: #c33333;
+      color: #cc3333;
     }
   }
 }
@@ -387,6 +460,7 @@
 /*=================================================*/
 .testimonial {
   background: url('../img/footer.jpg') center;
+  position: relative;
 
   &__reviews {
     display: flex;
@@ -475,6 +549,43 @@
     }
   }
 }
+
+.swiper-pagination {
+  bottom: 15rem;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: transparent !important;
+  border: 1px solid #7d7d7d;
+  position: relative;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0.5;
+  transform: translateY(-2rem);
+  bottom: 15px;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  border: 1px solid #fff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    height: 6px;
+    width: 6px;
+    transform: translate(-50%, -50%);
+    border-radius: 5rem;
+  }
+}
 /*=================================================*/
 /*              News Letter                       */
 /*=================================================*/
@@ -488,6 +599,10 @@
     font-size: 1.5rem;
     border-radius: 2rem;
     padding-left: 1rem;
+
+    @media only screen and (max-width: $bp-767) {
+      width: 95%;
+    }
   }
 
   &__submit {
@@ -501,6 +616,11 @@
   &__img {
     height: 90%;
     width: 100%;
+
+    @media only screen and (max-width: $bp-767) {
+      height: 100%;
+      margin-top: 5rem;
+    }
   }
 }
 /*=================================================*/
@@ -510,6 +630,7 @@
   &__details {
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
 
     img {
       width: 10rem;
@@ -532,14 +653,19 @@
   &__number {
     color: #cc3333;
     font-weight: 700;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   &__btn {
     margin-left: 3rem;
+
+    @media only screen and (max-width: 435px) {
+      margin-top: 2rem;
+      margin-left: 12rem;
+    }
   }
   &__right-part {
-    padding: 3rem 3rem 0 3rem;
+    padding: 5rem 3rem 3rem 3rem;
   }
 }
 /*=================================================*/
@@ -567,9 +693,9 @@
   }
 
   &__date {
-    background: #c33333;
+    background: #cc3333;
     color: #fff;
-    padding: 0.5rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 7px;
     grid-row: 1/2;
     z-index: 2;
@@ -597,7 +723,15 @@
 /*             Instagram                           */
 /*=================================================*/
 .instagram {
-  background: url('../img/footer.jpg') center;
+  background: #131313;
+
+  &__single-item {
+    width: 40rem;
+    img {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
 }
 /*=================================================*/
 /*              Footer                       */

@@ -46,6 +46,7 @@ $bp-xlarge: 112.5em; //1800px
 $bp-largest: 75em; //1200px
 $bp-992: 61.875em; //990
 $bp-small: 52.25em; //900px
+$bp-767: 47.94em; //767
 $bp-xsmall: 37.5em; //600px
 $bp-380: 23.75em; //380
 $bp-340: 21.25em; //340
@@ -96,6 +97,13 @@ html {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+
+  &:hover {
+    // background: rgba(#131313, 0.5);
+    background: #ffffff;
+    color: #131313;
+    border: 1px solid #131313;
+  }
 
   // span {
   //   position: absolute;
@@ -247,4 +255,8 @@ html {
   @media only screen and (max-width: $bp-small) {
     padding: 7rem 1rem;
   }
+}
+
+.swiper-container {
+  overflow: hidden;
 }
