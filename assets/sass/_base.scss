@@ -25,7 +25,7 @@ ol {
 body {
   font-family: 'Poppins', sans-serif;
   // background-color: #131313;
-  background-color: #fff5ec;
+  // background-color: #fff5ec;
 }
 
 img {
@@ -185,6 +185,11 @@ html {
     &--testimonial {
       color: rgba(#fff, 0.7);
     }
+
+    &--news-letter {
+      color: rgba(#fff, 0.7);
+      text-align: start;
+    }
   }
 
   &--about-page {
@@ -192,6 +197,10 @@ html {
     @media only screen and (max-width: $bp-small) {
       margin-bottom: 0rem;
     }
+  }
+
+  &.heading--news-letter {
+    align-items: flex-start;
   }
 }
 
@@ -202,7 +211,7 @@ html {
   font-weight: 400;
   letter-spacing: -0.1px;
   margin-bottom: 2rem;
-  text-align: justify;
+  // text-align: justify;
 
   @media only screen and (max-width: $bp-xsmall) {
     font-size: var(--responsive-font);
