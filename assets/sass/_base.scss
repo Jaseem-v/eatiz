@@ -291,3 +291,19 @@ html {
 .swiper-container {
   overflow: hidden;
 }
+
+/*=================================================*/
+/*                      Container                */
+/*=================================================*/
+
+@media only screen and (max-height: 600px) {
+  .container {
+    max-width: 608px;
+  }
+}
+
+@media only screen and (min-width: $bp-xlarge) {
+  .container {
+    max-width: 132rem;
+  }
+}
