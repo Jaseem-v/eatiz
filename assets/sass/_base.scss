@@ -144,6 +144,36 @@ html {
   }
 }
 
+.line-btn {
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 2rem;
+      color: #cc3333;
+      border-bottom: 1px solid #cc3333;
+      padding: 3px;
+      transition: all 0.2s;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    &:hover {
+      background: #cc3333;
+      color: #fff;
+      padding: 3px 1.5rem;
+      border-radius: 5px;
+      box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.15);
+      transform: translateY(-3px);
+    }
+  }
+}
+
 /*=================================================*/
 /*                 Typography                      */
 /*=================================================*/

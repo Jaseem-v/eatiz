@@ -31,19 +31,22 @@ $(window).on('scroll', function () {
 
 const menuButtons = document.querySelector(".menu__buttons");
 const menuBtn = document.querySelectorAll(".menu__buttons-item")
+if (menuButtons) {
+    menuButtons.addEventListener("click", (e) => {
+        if (!e.target.classList.contains("menu__buttons-item")) return;
 
-menuButtons.addEventListener("click", (e) => {
-    if (!e.target.classList.contains("menu__buttons-item")) return;
-    menuBtn.forEach(el => el.classList.remove("active"))
-    e.target.classList.add("active")
+        if (menuBtn)
+            menuBtn.forEach(el => el.classList.remove("active"))
+        e.target.classList.add("active")
 
-    let selector = e.target.dataset.filter
+        let selector = e.target.dataset.filter
 
-    $(".menu__items .row").isotope({
-        filter: `${selector == "all" ? "*" : `.${selector}`}`
-    });
+        $(".menu__items .row").isotope({
+            filter: `${selector == "all" ? "*" : `.${selector}`}`
+        });
 
-})
+    })
+}
 
 
 // slider
@@ -101,17 +104,32 @@ $('#datepicker').datepicker({
     startDate: date
 });
 
-reserveDate.addEventListener("keypress", (e) => {
-    e.preventDefault();
-})
+if (reserveDate) {
+    reserveDate.addEventListener("keypress", (e) => {
+        e.preventDefault();
+    })
 
-reserveDate.attributes.placeholder.value = `${date.getDate()}/ ${date.getMonth() + 1} / ${date.getFullYear()}`
+    reserveDate.attributes.placeholder.value = `${date.getDate()}/ ${date.getMonth() + 1} / ${date.getFullYear()}`
+}
 
 
-// // time
+$('#reserve-time').timepicker({
+    interval: 60,
+    minTime: '8:30am',
+    maxTime: '10:00pm',
+    defaultTime: '9pm',
+    startTime: '8:30am',
+    dynamic: false,
+    dropdown: true,
+    scrollbar: true
+});
 
-// $('#reserve-time').pickatime({
-//     twelvehour: true,
-//     min: "8:20am",
-//     max: "5:15pm"
-// });
+
+// 
+const menu_first = document.querySelector(".menu__single-item--first img")
+const menu_items = document.querySelectorAll(".menu__item img");
+
+if (menu_first && menu_items)
+    menu_items.forEach(el => {
+        el.style.height = `${menu_first.getBoundingClientRect().height}px`
+    })
