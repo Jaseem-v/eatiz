@@ -190,7 +190,7 @@
 /*=====================================================*/
 .reservation {
   &__form {
-    padding: 4rem 0.5rem;
+    padding: 4rem 00rem;
     @media only screen and (max-width: $bp-992) {
       padding: 0rem 0.5rem;
     }
@@ -658,6 +658,17 @@ select::-ms-expand {
 .news-letter {
   background: url('../img/footer.jpg') center;
 
+  &__left-part {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
   &__input {
     height: 6rem;
     width: 80%;
@@ -680,7 +691,7 @@ select::-ms-expand {
   }
 
   &__img {
-    height: 90%;
+    // height: 100%;
     width: 100%;
 
     @media only screen and (max-width: $bp-767) {
@@ -760,8 +771,6 @@ select::-ms-expand {
   }
 
   &__date {
-    background: #cc3333;
-    color: #fff;
     padding: 0.8rem 1.5rem;
     border-radius: 7px;
     grid-row: 1/2;
@@ -770,6 +779,8 @@ select::-ms-expand {
     align-self: flex-end;
     grid-column: 1/3;
     transform: translate(-2rem, 2rem);
+    background: #ffc55a;
+    color: #000;
   }
 
   &__details {
@@ -911,7 +922,7 @@ select::-ms-expand {
   }
 
   &__logo {
-    width: 10rem;
+    width: 11.8rem;
     margin-bottom: 2rem;
     border-radius: 0px;
   }
@@ -957,9 +968,9 @@ select::-ms-expand {
 .breadcrumb {
   background-image: url('../img/slider1.jpg');
   background-size: cover;
-  background-position: center right;
+  background-position: 0% 55%;
   margin-bottom: 0;
-  padding: 10rem 0;
+  padding: 6rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -969,7 +980,7 @@ select::-ms-expand {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.9;
+    opacity: 0.6;
     background: #000;
     width: 100%;
     height: 100%;
@@ -979,6 +990,9 @@ select::-ms-expand {
   &__heading {
     z-index: 2;
     // text-align: center;
+    @media only screen and (max-width: $bp-xsmall) {
+      padding: 0rem 1rem;
+    }
   }
 
   &__title {
@@ -1014,3 +1028,45 @@ select::-ms-expand {
 // contact
 @import 'contact';
 @import 'form';
+
+// pagination
+
+.pagination {
+  &__box {
+    margin: 4rem auto 0rem;
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__number {
+    padding: 0.5rem 1.6rem;
+    background-color: #f3f4f2;
+    margin: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.6rem;
+    }
+    &:hover {
+      background-color: #d9dcd6;
+    }
+  }
+
+  .active {
+    border-radius: 4px;
+    background-color: #cc3333;
+    &:hover {
+      background-color: #cc3333;
+    }
+    a {
+      color: #f3f4f2;
+    }
+  }
+}
