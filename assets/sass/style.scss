@@ -190,7 +190,7 @@
 /*=====================================================*/
 .reservation {
   &__form {
-    padding: 4rem 00rem;
+    padding: 2rem 00rem;
     @media only screen and (max-width: $bp-992) {
       padding: 0rem 0.5rem;
     }
@@ -257,11 +257,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin: 2rem auto 4rem;
   }
 
   &__btn {
     padding: 0.8rem 8rem;
+  }
+
+  &__footer {
+    position: relative;
+    text-align: center;
+    background-color: #fafafa;
+    overflow: visible;
+    padding: 20px 0px;
+
+    p {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -795,6 +808,20 @@ select::-ms-expand {
 
   &__description {
     font-size: 1.6rem;
+  }
+
+  &__btn {
+    font-size: 1.6rem;
+    color: #cc3333;
+    border-bottom: 1px solid #cc3333;
+    padding: 3px 0;
+    transition: all 0.2s;
+    font-weight: 500;
+    line-height: 1.6;
+
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
   }
 }
 /*=================================================*/
