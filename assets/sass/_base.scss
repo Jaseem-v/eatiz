@@ -24,8 +24,7 @@ ol {
 
 body {
   font-family: 'Poppins', sans-serif;
-  // background-color: #131313;
-  // background-color: #fff5ec;
+  overflow-x: hidden;
 }
 
 img {
@@ -312,4 +311,11 @@ html {
   .container {
     max-width: 132rem;
   }
+}
+
+//  selection
+
+::selection{
+  color: #fff;
+  background:rgba(#cc3333,0.5);
 }

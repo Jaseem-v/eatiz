@@ -125,11 +125,29 @@ $('#reserve-time').timepicker({
 });
 
 
-// 
+// meanu item equal height
 const menu_first = document.querySelector(".menu__single-item--first img")
 const menu_items = document.querySelectorAll(".menu__item img");
 
-if (menu_first && menu_items)
+if (menu_first && menu_items) {
+
     menu_items.forEach(el => {
         el.style.height = `${menu_first.getBoundingClientRect().height}px`
     })
+}
+
+// Blog item equal height
+const blog_first = document.querySelector(".blog__single-item--first img")
+const blog_items = document.querySelectorAll(".blog__img");
+
+if (blog_first && blog_items) {
+
+    blog_items.forEach(el => {
+        el.style.height = `${blog_first.getBoundingClientRect().height}px`
+    })
+}
+
+// AOS
+
+AOS.init({ once: true, delay: 150 });
+
