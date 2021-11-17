@@ -1,7 +1,7 @@
 @import 'base';
 @import 'navbar';
 /*=====================================================*/
-/*                   Nav bar                           */
+/*                  Mini Nav bar                       */
 /*=====================================================*/
 .navbar {
   padding: 1.5rem 0;
@@ -1054,7 +1054,9 @@ select::-ms-expand {
 @import 'contact';
 @import 'form';
 
-// pagination
+/*=====================================================*/
+/*                      Pagination                     */
+/*=====================================================*/
 
 .pagination {
   &__box {
@@ -1095,12 +1097,10 @@ select::-ms-expand {
     }
   }
 }
-/////////////////////////////////////
-// Team
-
+/*=====================================================*/
+/*                       Team                      */
+/*=====================================================*/
 .team {
-  // position: relative;
-
   &__single-item {
     position: relative;
     overflow: hidden;
@@ -1111,7 +1111,6 @@ select::-ms-expand {
 
   &__details {
     padding: 2.5rem 1.5rem;
-    // background: rgba($color: #cc3333, $alpha: 0.7);
     position: absolute;
     bottom: -38px;
     left: 0;
@@ -1146,16 +1145,12 @@ select::-ms-expand {
   }
 
   &__position {
-    // font-size: 1.6rem;
-    // color: #fff;
     font-weight: 500;
     color: #2e2751;
 
     position: relative;
     font-size: 1.4rem;
     display: block;
-    // padding-bottom: 12px;
-    // margin-top: 5px;
   }
 
   &__img {
@@ -1180,10 +1175,9 @@ select::-ms-expand {
     }
   }
 }
-
-///////////////////////////////////
-//SOCIAL LINK
-
+/*=====================================================*/
+/*                   Social link                      */
+/*=====================================================*/
 .social-link {
   padding-left: 0;
   list-style-type: none;
@@ -1226,7 +1220,6 @@ select::-ms-expand {
     }
   }
 }
-
 
 /*=====================================================*/
 /*                     scroll                          */
@@ -1295,13 +1288,12 @@ select::-ms-expand {
     font-size: 3.4rem;
   }
 
-  &--icon{
+  &--icon {
     margin-top: 1.6rem;
     transform: translate(2%, -15%);
-  
+
     @media only screen and (max-width: $bp-small) {
       margin-top: 2.2rem;
     }
   }
 }
-

@@ -129,7 +129,7 @@ $('#reserve-time').timepicker({
     scrollbar: true
 });
 
-
+//////////////////////////////////////////
 // meanu item equal height
 
 const menu_first = document.querySelector(".menu__single-item--first img")
@@ -142,6 +142,8 @@ if (menu_first && menu_items) {
     })
 }
 
+
+//////////////////////////////////////////
 // Blog item equal height
 
 const blog_first = document.querySelector(".blog__single-item--first img")
@@ -173,10 +175,23 @@ $(document).ready(function () {
 });
 
 
-// AOS
+////////////////////////////////////////////
+// Aos
 
 AOS.init({
     once: true,
     //  delay: 150
 });
 
+////////////////////////////////////////////
+// Magnific popup
+
+$(document).ready(function () {
+    $('.instagram__magnific').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: false
+        }
+    });
+
+});
