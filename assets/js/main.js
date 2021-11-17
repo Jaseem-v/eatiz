@@ -27,6 +27,7 @@ $(window).on('scroll', function () {
 });
 
 
+////////////////////////////////////////////////////
 // portofolio-filter
 
 const menuButtons = document.querySelector(".menu__buttons");
@@ -49,7 +50,8 @@ if (menuButtons) {
 }
 
 
-// slider
+//////////////////////////////////////////////////////
+// swiper
 
 
 var swiper = new Swiper(".instagram__swiper", {
@@ -94,7 +96,8 @@ var swiper1 = new Swiper(".testimonial__swiper", {
     grabCursor: true,
 });
 
-// date picker
+///////////////////////////////////
+// Date Picker
 
 const reserveDate = document.getElementById("datepicker")
 var date = new Date();
@@ -112,6 +115,8 @@ if (reserveDate) {
     reserveDate.attributes.placeholder.value = `${date.getDate()}/ ${date.getMonth() + 1} / ${date.getFullYear()}`
 }
 
+///////////////////////////////////////
+//  Time Picker
 
 $('#reserve-time').timepicker({
     interval: 60,
@@ -126,6 +131,7 @@ $('#reserve-time').timepicker({
 
 
 // meanu item equal height
+
 const menu_first = document.querySelector(".menu__single-item--first img")
 const menu_items = document.querySelectorAll(".menu__item img");
 
@@ -137,6 +143,7 @@ if (menu_first && menu_items) {
 }
 
 // Blog item equal height
+
 const blog_first = document.querySelector(".blog__single-item--first img")
 const blog_items = document.querySelectorAll(".blog__img");
 
@@ -147,7 +154,29 @@ if (blog_first && blog_items) {
     })
 }
 
+
+/////////////////////////////////////////////////////
+// scroll
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#scroll').fadeIn();
+        } else {
+            $('#scroll').fadeOut();
+        }
+    });
+    $('#scroll').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+});
+
+
 // AOS
 
-AOS.init({ once: true, delay: 150 });
+AOS.init({
+    once: true,
+    //  delay: 150
+});
 

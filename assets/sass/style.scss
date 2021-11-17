@@ -807,10 +807,6 @@ select::-ms-expand {
     font-weight: 600;
   }
 
-  &__description {
-    font-size: 1.6rem;
-  }
-
   &__btn {
     font-size: 1.6rem;
     color: #cc3333;
@@ -1230,3 +1226,82 @@ select::-ms-expand {
     }
   }
 }
+
+
+/*=====================================================*/
+/*                     scroll                          */
+/*=====================================================*/
+
+#scroll {
+  position: fixed;
+  right: 2rem;
+  bottom: 8rem;
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  background-color: #cc3333;
+  display: none;
+  -webkit-border-radius: 6rem;
+  -moz-border-radius: 6rem;
+  border-radius: 6rem;
+  z-index: 100;
+
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+
+  @media only screen and (max-width: $bp-small) {
+    width: 6.4rem;
+    height: 6.4rem;
+    bottom: 9rem;
+  }
+  &:hover {
+    background-color: rgba($color: #cc3333, $alpha: 0.7);
+    opacity: 1;
+    filter: 'alpha(opacity=100)';
+    -ms-filter: 'alpha(opacity=100)';
+  }
+}
+
+/*=====================================================*/
+/*              Whastapp float                         */
+/*=====================================================*/
+.whatsapp-float {
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 5rem;
+  text-align: center;
+  font-size: 3rem;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+
+  &:hover {
+    color: #fff;
+    background-color: rgba(#25d366, 0.7);
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    width: 6.4rem;
+    height: 6.4rem;
+    font-size: 3.4rem;
+  }
+
+  &--icon{
+    margin-top: 1.6rem;
+    transform: translate(2%, -15%);
+  
+    @media only screen and (max-width: $bp-small) {
+      margin-top: 2.2rem;
+    }
+  }
+}
+
