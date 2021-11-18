@@ -423,18 +423,8 @@ select::-ms-expand {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: auto;
     margin-bottom: 3.5rem;
-
-    @media only screen and (max-width: $bp-992) {
-      width: 65%;
-    }
-    @media only screen and (max-width: $bp-767) {
-      width: 80%;
-    }
-    @media only screen and (max-width: $bp-xsmall) {
-      width: 100%;
-    }
 
     &-item {
       list-style-type: none;
@@ -444,8 +434,8 @@ select::-ms-expand {
       cursor: pointer;
       border-radius: 5rem;
       padding: 1rem 3rem;
-      margin-left: 0.5rem;
-      margin-right: 0.5rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
       transition: all 0.5s ease;
       font-weight: 500;
       background-color: #f5f5f5;
