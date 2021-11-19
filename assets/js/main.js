@@ -17,6 +17,8 @@ overlay.addEventListener("click", mobileMenu)
 
 ///////////////////////////////////////
 // Navbar scroll
+const logo = document.querySelector(".navigation__logo img");
+
 $(window).on('scroll', function () {
     if ($(window).scrollTop() > 400) {
         $('#navbar').addClass('sticky')
@@ -25,6 +27,26 @@ $(window).on('scroll', function () {
 
     }
 });
+
+
+
+// //////////////////////////////////////////////////
+//
+$(window).on('scroll', function () {
+    if ($(window).scrollTop() > 400) {
+        if (logo.closest(".navigation").classList.contains("sticky"))
+            logo.src = "assets/img/logo-2.svg";
+        else
+            logo.src = "assets/img/logo.svg";
+
+    } else {
+        logo.src = "assets/img/logo.svg";
+
+    }
+});
+
+
+
 
 
 ////////////////////////////////////////////////////
