@@ -147,6 +147,7 @@
       display: inline;
       outline: #cc3333;
       justify-self: stretch;
+      background: #fff !important;
 
       @media only screen and (max-width: $bp-xsmall) {
         font-size: 1.8rem;
