@@ -229,6 +229,10 @@ select::-ms-expand {
       padding: 3rem 0rem 3rem 3rem;
     }
 
+    @media only screen and (max-width: $bp-xsmall) {
+      padding: 3rem 0rem 0rem 2rem;
+    }
+
     &--page {
       padding: 0rem 0rem 0rem 4rem;
       display: flex;
@@ -254,6 +258,9 @@ select::-ms-expand {
     }
     @media only screen and (max-width: $bp-small) {
       padding: 3rem 1rem 0rem 1rem;
+    }
+    @media only screen and (max-width: $bp-xsmall) {
+      padding: 0rem 1rem 0rem 1rem;
     }
 
     img {

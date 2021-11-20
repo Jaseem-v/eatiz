@@ -74,49 +74,52 @@ if (menuButtons) {
 
 //////////////////////////////////////////////////////
 // swiper
+const insta_swiper = document.querySelector(".instagram__swiper");
+const testimonial_swiper = document.querySelector(".testimonial__swiper");
 
-
-var swiper = new Swiper(".instagram__swiper", {
-    slidesPerView: 2,
-    spaceBetween: 10,
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
+if (insta_swiper) {
+    var swiper = new Swiper(".instagram__swiper", {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            990: {
+                slidesPerView: 4,
+            },
+            1400: {
+                slidesPerView: 5,
+            }
         },
-        768: {
-            slidesPerView: 3,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
         },
-        990: {
-            slidesPerView: 4,
+        loop: true,
+    });
+}
+
+if (testimonial_swiper) {
+    var swiper1 = new Swiper(".testimonial__swiper", {
+        slidesPerView: 1,
+        spaceBetween: 50,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
         },
-        1400: {
-            slidesPerView: 5,
-        }
-    },
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    loop: true,
-});
 
-
-
-var swiper1 = new Swiper(".testimonial__swiper", {
-    slidesPerView: 1,
-    spaceBetween: 50,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-    },
-    loop: true,
-    grabCursor: true,
-});
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        grabCursor: true,
+    });
+}
 
 ///////////////////////////////////
 // Date Picker
@@ -125,9 +128,11 @@ const reserveDate = document.getElementById("datepicker")
 var date = new Date();
 date.setDate(date.getDate());
 
-$('#datepicker').datepicker({
-    startDate: date
-});
+if (reserveDate) {
+    $('#datepicker').datepicker({
+        startDate: date
+    });
+}
 
 if (reserveDate) {
     reserveDate.addEventListener("keypress", (e) => {
@@ -139,17 +144,21 @@ if (reserveDate) {
 
 ///////////////////////////////////////
 //  Time Picker
+const reserveTime = document.getElementById("reserve-time")
 
-$('#reserve-time').timepicker({
-    interval: 60,
-    minTime: '8:30am',
-    maxTime: '10:00pm',
-    defaultTime: '9pm',
-    startTime: '8:30am',
-    dynamic: false,
-    dropdown: true,
-    scrollbar: true
-});
+if (reserveTime) {
+
+    $('#reserve-time').timepicker({
+        interval: 60,
+        minTime: '8:30am',
+        maxTime: '10:00pm',
+        defaultTime: '9pm',
+        startTime: '8:30am',
+        dynamic: false,
+        dropdown: true,
+        scrollbar: true
+    });
+}
 
 //////////////////////////////////////////
 // meanu item equal height
@@ -199,21 +208,27 @@ $(document).ready(function () {
 
 ////////////////////////////////////////////
 // Aos
+const aos_fade_up = document.querySelector("[data-aos=\"fade-up\"]")
 
-AOS.init({
-    once: true,
-    //  delay: 150
-});
-
+if (aos_fade_up) {
+    AOS.init({
+        once: true,
+        //  delay: 150
+    });
+}
 ////////////////////////////////////////////
 // Magnific popup
+const instagram__magnific = document.querySelector('.instagram__magnific')
 
-$(document).ready(function () {
-    $('.instagram__magnific').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: false
-        }
+if (instagram__magnific) {
+
+    $(document).ready(function () {
+        $('.instagram__magnific').magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: false
+            }
+        });
+
     });
-
-});
+}
