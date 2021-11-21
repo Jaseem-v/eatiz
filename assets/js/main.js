@@ -168,6 +168,7 @@ const blog_first = document.querySelector(".blog__single-item--first img")
 const blog_items = document.querySelectorAll(".blog__img");
 
 if (blog_first) {
+    blog_first.src = "assets/img/blog/blog1.jpg"
     blog_first.addEventListener("load", function () {
         console.log("img loaded");
         if (blog_first && blog_items) {
