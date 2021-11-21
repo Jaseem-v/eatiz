@@ -139,6 +139,13 @@
         img {
           // filter: invert(1);
         }
+        &--2 {
+          display: block;
+        }
+
+        &--1 {
+          display: none;
+        }
       }
 
       &__menu {
@@ -175,6 +182,14 @@
     img {
       width: 16rem;
       border-radius: 0px;
+    }
+
+    &--1 {
+      display: block;
+    }
+
+    &--2 {
+      display: none;
     }
     @media only screen and (max-width: $bp-992) {
       order: 0;

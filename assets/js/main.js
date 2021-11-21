@@ -13,23 +13,6 @@ $(window).on('scroll', function () {
 });
 
 
-
-// //////////////////////////////////////////////////
-//
-$(window).on('scroll', function () {
-    if ($(window).scrollTop() > 400) {
-        if (logo.closest(".navigation").classList.contains("sticky"))
-            logo.src = "assets/img/logo-2.svg";
-        else
-            logo.src = "assets/img/logo.svg";
-
-    } else {
-        logo.src = "assets/img/logo.svg";
-
-    }
-});
-
-
 /////////////////////////////////////////////////////
 // Mobile menu
 const openBtn = document.querySelector(".open-btn")
