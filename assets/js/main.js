@@ -161,31 +161,29 @@ if (reserveTime) {
 }
 
 //////////////////////////////////////////
-// meanu item equal height
+// meanu item equal height  &  Blog item equal height
 
 const menu_first = document.querySelector(".menu__single-item--first img")
 const menu_items = document.querySelectorAll(".menu__item img");
-
-if (menu_first && menu_items) {
-
-    menu_items.forEach(el => {
-        el.style.height = `${menu_first.getBoundingClientRect().height}px`
-    })
-}
-
-
-//////////////////////////////////////////
-// Blog item equal height
-
 const blog_first = document.querySelector(".blog__single-item--first img")
 const blog_items = document.querySelectorAll(".blog__img");
+$(document).ready(function () {
+    if (menu_first && menu_items) {
 
-if (blog_first && blog_items) {
+        menu_items.forEach(el => {
+            el.style.height = `${menu_first.getBoundingClientRect().height}px`
+        })
+    }
 
-    blog_items.forEach(el => {
-        el.style.height = `${blog_first.getBoundingClientRect().height}px`
-    })
-}
+    if (blog_first && blog_items) {
+
+        blog_items.forEach(el => {
+            el.style.height = `${blog_first.getBoundingClientRect().height}px`
+        })
+    }
+});
+
+
 
 
 /////////////////////////////////////////////////////
